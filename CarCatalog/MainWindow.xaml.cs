@@ -35,7 +35,7 @@ namespace CarCatalog
             string directoryPath = @"C:\Users\Vladimir\source\repos\CarCatalog\CarCatalog\Images";
             string[] pathFileName = Directory.GetFiles(directoryPath);
             string[] fileName = new string[pathFileName.Length];
-            int cutPath = directoryPath.Length+1;
+            int cutPath = directoryPath.Length + 1;
 
             for (int i = 0; i < fileName.Count(); i++)
             {
@@ -59,14 +59,24 @@ namespace CarCatalog
                     carImage.Width = 35;
                     carImage.Height = 35;
                     BitmapImage bi = new BitmapImage();
-                    Label carName = new Label();
+
+                    TextBlock carName = new TextBlock()
+                    {   VerticalAlignment = VerticalAlignment.Center,
+                        TextDecorations = TextDecorations.Underline,
+                        Margin = new Thickness(10, 0 , 0, 0)
+                    };
+
                     if (countFiles < fileName.Length)
                     {
                         carImage.Source = new BitmapImage(new Uri(pathFileName[countFiles]));
-                        carName.Content = fileName[countFiles];
+                        carName.Text = fileName[countFiles];
                         countFiles++;
                     }
 
+                    
+                    carName.MouseLeftButtonUp += CarName_MouseLeftButtonUp;
+                    carName.MouseEnter += CarName_MouseEnter;
+                    carName.MouseLeave += CarName_MouseLeave;
 
                     itemCarBrand.Children.Add(carImage);
                     itemCarBrand.Children.Add(carName);
@@ -75,6 +85,22 @@ namespace CarCatalog
             }
 
 
+        }
+
+        private void CarName_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ((TextBlock)sender).Foreground = Brushes.Black;
+        }
+
+        private void CarName_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ((TextBlock)sender).Foreground = Brushes.Blue;
+        }
+
+        private void CarName_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+            MessageBox.Show((string)((TextBlock)sender).Text);
         }
     }
 }

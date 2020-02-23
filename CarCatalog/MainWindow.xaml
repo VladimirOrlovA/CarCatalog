@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarCatalog"
         mc:Ignorable="d"
-        Title="CarCatalog" Height="650" Width="1200">
+        Title="CarCatalog" Height="650" Width="1500">
     <StackPanel Margin="20">
         <TabControl>
             <TabItem Header="Каталог производителей">
