@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarCatalog"
         mc:Ignorable="d"
-        Title="CarCatalog" Height="450" Width="800">
-    <StackPanel>
+        Title="CarCatalog" Height="650" Width="1200">
+    <StackPanel Margin="20">
         <TabControl>
             <TabItem Header="Каталог производителей">
-                <Grid x:Name="gCarBrand">
+                <Grid x:Name="gCarBrand" Margin="20">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
