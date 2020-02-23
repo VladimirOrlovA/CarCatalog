@@ -100,7 +100,7 @@ namespace CarCatalog
         private void CarName_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
 
-            MessageBox.Show((string)((TextBlock)sender).Text);
+            MessageBox.Show((string)((TextBlock)sender).Text); 
         }
     }
 }
