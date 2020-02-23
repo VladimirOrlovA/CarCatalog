@@ -6,19 +6,38 @@
         xmlns:local="clr-namespace:CarCatalog"
         mc:Ignorable="d"
         Title="CarCatalog" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
         <TabControl>
-            <TabItem Header="Manufacturers Catalog">
+            <TabItem Header="Каталог производителей">
+                <Grid x:Name="gCarBrand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="VIN - номер">
                 
             </TabItem>
 
-            <TabItem Header="VIN Code">
-                
-            </TabItem>
-
-            <TabItem Header="SparePart number">
+            <TabItem Header="Номер детали">
                 
             </TabItem>
         </TabControl>
-    </Grid>
+    </StackPanel>
 </Window>

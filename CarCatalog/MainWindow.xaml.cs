@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,51 @@ namespace CarCatalog
         public MainWindow()
         {
             InitializeComponent();
+            FillContentCarBrend();
+        }
+
+        public void FillContentCarBrend()
+        {
+            int column = gCarBrand.ColumnDefinitions.Count();
+            int row = gCarBrand.RowDefinitions.Count();
+
+            string directoryPath = @"C:\Users\Vladimir\source\repos\CarCatalog\CarCatalog\Images";
+            string[] fileName = Directory.GetFiles(directoryPath);
+
+            int cutPath = directoryPath.Length+1;
+
+            for (int i = 0; i < fileName.Count(); i++)
+            {
+
+                fileName[i] = fileName[i].Remove(0, cutPath);
+                fileName[i] = fileName[i].Substring(0, fileName[i].IndexOf(".")).ToUpper();
+            }
+
+            int countFiles = 0;
+            for (int i = 0; i < column; i++)
+            {
+                for (int j = 0; j < row; j++)
+                {
+                    StackPanel itemCarBrand = new StackPanel();
+                    Grid.SetColumn(itemCarBrand, i);
+                    Grid.SetRow(itemCarBrand, j);
+
+                    Image carImage = new Image();
+                    Label carName = new Label();
+                    if (countFiles < fileName.Length)
+                    {
+                        carName.Content = fileName[countFiles];
+                        countFiles++;
+                    }
+
+
+                    itemCarBrand.Children.Add(carImage);
+                    itemCarBrand.Children.Add(carName);
+                    gCarBrand.Children.Add(itemCarBrand);
+                }
+            }
+
+
         }
     }
 }
