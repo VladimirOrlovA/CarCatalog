@@ -31,7 +31,7 @@
                                 Grid.RowSpan="2"
                                 Grid.Column="1"
                                 Grid.ColumnSpan="2"
-                                Visibility="Hidden"
+                                Visibility="Visible"
                                 Margin="20">
                         <Border
                                 CornerRadius="5, 5 , 0, 0"
@@ -56,7 +56,7 @@
                                         <TextBox x:Name="tbInputVin" Width="300"
                                                  BorderBrush="White">XTA219110EY000061</TextBox>
                                     </Border>
-                                    
+
                                     <Border CornerRadius="5"
                                             BorderBrush="Gray"
                                             BorderThickness="1"
@@ -77,7 +77,7 @@
                                 Grid.RowSpan="2"
                                 Grid.Column="4"
                                 Grid.ColumnSpan="2"
-                                Visibility="Hidden"
+                                Visibility="Visible"
                                 Margin="20">
 
                         <Border CornerRadius="5, 5 , 0, 0"
@@ -132,7 +132,7 @@
                                 Grid.RowSpan="2"
                                 Grid.Column="1"
                                 Grid.ColumnSpan="2"
-                                Visibility="Hidden"
+                                Visibility="Visible"
                                 Margin="20">
                         <Border
                                 CornerRadius="5, 5 , 0, 0"
@@ -197,9 +197,9 @@
             </TabItem>
 
             <TabItem Header="Номер детали">
-                <StackPanel></StackPanel>
+
             </TabItem>
-            
+
         </TabControl>
     </StackPanel>
 

@@ -30,12 +30,36 @@
                 </Grid>
             </TabItem>
 
-            <TabItem x:Name="tiVin" Header="VIN - номер">
+            <TabItem x:Name="tiVin" PreviewMouseUp="TiVin_PreviewMouseUp" Header="VIN - номер">
                 <StackPanel></StackPanel>
             </TabItem>
 
             <TabItem x:Name="tiSpareParts" Header="Номер детали">
-                <StackPanel></StackPanel>
+                <StackPanel Margin="10">
+                    <Label>Для выполнения поиска введите номер детали, например 1002101:</Label>
+
+                    <StackPanel Orientation="Horizontal">
+                                <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3">
+                                    <TextBox x:Name="tbInputVin" Width="600"
+                                                 BorderBrush="White"></TextBox>
+                                </Border>
+
+                                <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3"
+                                            Margin="5,0,0,0">
+                                    <Button Margin="10 0" 
+                                                Background="White"
+                                                BorderBrush="White">Найти</Button>
+                                </Border>
+                            </StackPanel>
+
+                </StackPanel>
+
             </TabItem>
         </TabControl>
     </StackPanel>

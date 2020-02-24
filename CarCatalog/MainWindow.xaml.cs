@@ -65,9 +65,10 @@ namespace CarCatalog
                     BitmapImage bi = new BitmapImage();
 
                     TextBlock carName = new TextBlock()
-                    {   VerticalAlignment = VerticalAlignment.Center,
+                    {
+                        VerticalAlignment = VerticalAlignment.Center,
                         TextDecorations = TextDecorations.Underline,
-                        Margin = new Thickness(10, 0 , 0, 0)
+                        Margin = new Thickness(10, 0, 0, 0)
                     };
 
                     if (countFiles < fileName.Length)
@@ -94,27 +95,20 @@ namespace CarCatalog
         public void FillContentOneCarBrend(Image image)
         {
 
-            StackPanel brandLogo = new StackPanel() { Margin = new Thickness(20)};
+            StackPanel brandLogo = new StackPanel() { Margin = new Thickness(20) };
 
             Grid.SetRowSpan(brandLogo, 6);
+            Grid.SetColumn(brandLogo, 0);
             image.Width = 100;
             image.Height = 100;
             brandLogo.Children.Add(image);
             gCarBrand.Children.Add(brandLogo);
 
             Maket maket = new Maket();
-            maket.spSearchCarByVin.Visibility = Visibility.Visible;
-            maket.spSearchCarByBody.Visibility = Visibility.Visible;
-            maket.spSearchCarByParams.Visibility = Visibility.Visible;
             maket.gCarBrand.Children.Clear();
             gCarBrand.Children.Add(maket.spSearchCarByVin);
             gCarBrand.Children.Add(maket.spSearchCarByBody);
             gCarBrand.Children.Add(maket.spSearchCarByParams);
-
-            //StackPanel spFromTiVin = (StackPanel)tiVin.Content;
-            //spFromTiVin = maket.spSearchCarByVin;
-            //spFromTiVin.Children.Add(maket.spSearchCarByVin);
-            tiVin.Content = tiCatalog.Content;
         }
 
         private void CarName_MouseLeave(object sender, MouseEventArgs e)
@@ -137,6 +131,24 @@ namespace CarCatalog
             Image image = (Image)obj[0];
             obj.Clear();
             FillContentOneCarBrend(image);
+        }
+
+        private void TiVin_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Maket maket = new Maket();
+            maket.gCarBrand.Children.Clear();
+            StackPanel obj = new StackPanel() { Orientation = Orientation.Horizontal};
+
+            maket.spSearchCarByVin.Children.OfType<Border>().First().Visibility = Visibility.Collapsed;
+            maket.spSearchCarByVin.Children.OfType<Border>().Last().BorderBrush = Brushes.White;
+
+            maket.spSearchCarByBody.Children.OfType<Border>().First().Visibility = Visibility.Collapsed;
+            maket.spSearchCarByBody.Children.OfType<Border>().Last().BorderBrush = Brushes.White;
+
+            obj.Children.Add(maket.spSearchCarByVin);
+            obj.Children.Add(maket.spSearchCarByBody);
+
+            tiVin.Content = obj;
         }
     }
 }
