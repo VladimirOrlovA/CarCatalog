@@ -114,9 +114,7 @@ namespace CarCatalog
             //StackPanel spFromTiVin = (StackPanel)tiVin.Content;
             //spFromTiVin = maket.spSearchCarByVin;
             //spFromTiVin.Children.Add(maket.spSearchCarByVin);
-
             tiVin.Content = tiCatalog.Content;
-            //tiVin.Content = spFromTiVin;
         }
 
         private void CarName_MouseLeave(object sender, MouseEventArgs e)

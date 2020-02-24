@@ -19,6 +19,8 @@ namespace CarCatalog
     /// </summary>
     public partial class Maket : Window
     {
+        public string PlaceholderText { get; set; }
+
         public Maket()
         {
             InitializeComponent();

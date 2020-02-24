@@ -56,6 +56,7 @@
                                         <TextBox x:Name="tbInputVin" Width="300"
                                                  BorderBrush="White">XTA219110EY000061</TextBox>
                                     </Border>
+                                    
                                     <Border CornerRadius="5"
                                             BorderBrush="Gray"
                                             BorderThickness="1"
