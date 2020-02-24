@@ -9,16 +9,15 @@
     <StackPanel Margin="20">
         <TabControl>
             <TabItem Header="Каталог производителей">
-                <Grid x:Name="gCarBrand" Margin="20" ShowGridLines="True">
+                <Grid x:Name="gCarBrand" Margin="20" ShowGridLines="False">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -27,16 +26,16 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    
+
                 </Grid>
             </TabItem>
 
             <TabItem Header="VIN - номер">
-                
+
             </TabItem>
 
             <TabItem Header="Номер детали">
-                
+
             </TabItem>
         </TabControl>
     </StackPanel>

@@ -1,0 +1,204 @@
+﻿<Window x:Class="CarCatalog.Maket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarCatalog"
+        mc:Ignorable="d"
+        Title="Maket" Height="450" Width="800">
+    <StackPanel Margin="20">
+        <TabControl>
+            <TabItem Header="Каталог производителей">
+                <Grid x:Name="gCarBrand" Margin="20" ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel x:Name="spSearchCarByVin" Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="2"
+                                Visibility="Hidden"
+                                Margin="20">
+                        <Border
+                                CornerRadius="5, 5 , 0, 0"
+                                BorderBrush="Gray"
+                                BorderThickness="1, 1, 1, 0"
+                                Padding="10"
+                                Background="LightGray">
+                            <TextBlock>Поиск автомобиля по VIN</TextBlock>
+                        </Border>
+
+                        <Border CornerRadius="0, 0 , 5, 5"
+                                BorderBrush="Gray"
+                                BorderThickness="1"
+                                Padding="10">
+                            <StackPanel Margin="10">
+                                <Label>Введите VIN (17 знаков) например: XTA219110EY000061</Label>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3">
+                                        <TextBox Width="300"
+                                                 BorderBrush="White">XTA219110EY000061</TextBox>
+                                    </Border>
+                                    <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3"
+                                            Margin="5,0,0,0">
+                                        <Button Margin="10 0" 
+                                                Background="White"
+                                                BorderBrush="White">Найти</Button>
+                                    </Border>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+
+                    <GridSplitter Grid.Column="3" Width="50" Background="White"></GridSplitter>
+
+                    <StackPanel x:Name="spSearchCarByBody" Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="4"
+                                Grid.ColumnSpan="2"
+                                Visibility="Hidden"
+                                Margin="20">
+
+                        <Border CornerRadius="5, 5 , 0, 0"
+                            BorderBrush="Gray"
+                            BorderThickness="1, 1, 1, 0"
+                            Padding="10"
+                            Background="LightGray">
+                            <TextBlock>Поиск автомобиля по кузову</TextBlock>
+                        </Border>
+
+                        <Border CornerRadius="0, 0 , 5, 5"
+                            BorderBrush="Gray"
+                            BorderThickness="1"
+                            Padding="10">
+                            <StackPanel Margin="10">
+                                <Label>Введите код и номер кузова, например CK2A-0403374</Label>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3">
+                                        <TextBox Width="150"
+                                                 BorderBrush="White">CK2A</TextBox>
+
+                                    </Border>
+                                    <Label>-</Label>
+                                    <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3">
+                                        <TextBox Width="150"
+                                                 BorderBrush="White">0403374</TextBox>
+
+                                    </Border>
+                                    <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3"
+                                            Margin="10,0,0,0">
+                                        <Button Margin="10 0" 
+                                                Background="White"
+                                                BorderBrush="White">Найти</Button>
+                                    </Border>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+
+                    <GridSplitter Grid.Row="3" Height="25" ></GridSplitter>
+
+                    <StackPanel x:Name="spSearchCarByParams" Grid.Row="5"
+                                Grid.RowSpan="2"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="2"
+                                Visibility="Hidden"
+                                Margin="20">
+                        <Border
+                                CornerRadius="5, 5 , 0, 0"
+                                BorderBrush="Gray"
+                                BorderThickness="1, 1, 1, 0"
+                                Padding="10"
+                                Background="LightGray">
+                            <TextBlock>Идентификация автомобиля по параметрам</TextBlock>
+                        </Border>
+
+                        <Border CornerRadius="0, 0 , 5, 5"
+                                BorderBrush="Gray"
+                                BorderThickness="1"
+                                Padding="10">
+                            <StackPanel Margin="10">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3"
+                                            Margin="10">
+                                        <ComboBox Width="450">
+                                            <Label>fdfdf</Label>
+                                            <Label>fdfdf</Label>
+                                        </ComboBox>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3"
+                                            Margin="10">
+                                        <ComboBox Width="450">
+                                            <Label>fdfdf</Label>
+                                            <Label>fdfdf</Label>
+                                        </ComboBox>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border CornerRadius="5"
+                                            BorderBrush="Gray"
+                                            BorderThickness="1"
+                                            Padding="3"
+                                            Margin="10">
+                                        <ComboBox Width="450">
+                                            <Label>fdfdf</Label>
+                                            <Label>fdfdf</Label>
+                                        </ComboBox>
+                                    </Border>
+                                </StackPanel>
+                                <Label>Показать</Label>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="VIN - номер">
+
+            </TabItem>
+
+            <TabItem Header="Номер детали">
+
+            </TabItem>
+        </TabControl>
+    </StackPanel>
+
+</Window>
