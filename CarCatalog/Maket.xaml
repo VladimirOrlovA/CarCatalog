@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarCatalog"
         mc:Ignorable="d"
-        Title="Maket" Height="450" Width="800">
+        Title="Maket" Height="800" Width="1500">
     <StackPanel Margin="20">
         <TabControl>
             <TabItem Header="Каталог производителей">
@@ -158,8 +158,7 @@
                                             Padding="3"
                                             Margin="10">
                                         <ComboBox Width="450">
-                                            <Label>fdfdf</Label>
-                                            <Label>fdfdf</Label>
+                                            <ComboBoxItem IsSelected="True">Семейство</ComboBoxItem>
                                         </ComboBox>
                                     </Border>
                                 </StackPanel>
@@ -170,8 +169,7 @@
                                             Padding="3"
                                             Margin="10">
                                         <ComboBox Width="450">
-                                            <Label>fdfdf</Label>
-                                            <Label>fdfdf</Label>
+                                            <ComboBoxItem IsSelected="True">Кузов</ComboBoxItem>
                                         </ComboBox>
                                     </Border>
                                 </StackPanel>
@@ -182,8 +180,7 @@
                                             Padding="3"
                                             Margin="10">
                                         <ComboBox Width="450">
-                                            <Label>fdfdf</Label>
-                                            <Label>fdfdf</Label>
+                                            <ComboBoxItem IsSelected="True">Год</ComboBoxItem>
                                         </ComboBox>
                                     </Border>
                                 </StackPanel>
