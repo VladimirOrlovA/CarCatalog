@@ -53,7 +53,7 @@
                                             BorderBrush="Gray"
                                             BorderThickness="1"
                                             Padding="3">
-                                        <TextBox Width="300"
+                                        <TextBox x:Name="tbInputVin" Width="300"
                                                  BorderBrush="White">XTA219110EY000061</TextBox>
                                     </Border>
                                     <Border CornerRadius="5"
@@ -192,12 +192,13 @@
             </TabItem>
 
             <TabItem Header="VIN - номер">
-
+                <StackPanel></StackPanel>
             </TabItem>
 
             <TabItem Header="Номер детали">
-
+                <StackPanel></StackPanel>
             </TabItem>
+            
         </TabControl>
     </StackPanel>
 

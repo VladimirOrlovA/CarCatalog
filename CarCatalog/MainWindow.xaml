@@ -8,7 +8,7 @@
         Title="CarCatalog" Height="650" Width="1500">
     <StackPanel Margin="20">
         <TabControl>
-            <TabItem Header="Каталог производителей">
+            <TabItem x:Name="tiCatalog" Header="Каталог производителей">
                 <Grid x:Name="gCarBrand" Margin="20" ShowGridLines="False">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
@@ -30,12 +30,12 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="VIN - номер">
-
+            <TabItem x:Name="tiVin" Header="VIN - номер">
+                <StackPanel></StackPanel>
             </TabItem>
 
-            <TabItem Header="Номер детали">
-
+            <TabItem x:Name="tiSpareParts" Header="Номер детали">
+                <StackPanel></StackPanel>
             </TabItem>
         </TabControl>
     </StackPanel>

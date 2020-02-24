@@ -19,8 +19,12 @@ namespace CarCatalog
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
+        public string PlaceholderText { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -106,6 +110,13 @@ namespace CarCatalog
             gCarBrand.Children.Add(maket.spSearchCarByVin);
             gCarBrand.Children.Add(maket.spSearchCarByBody);
             gCarBrand.Children.Add(maket.spSearchCarByParams);
+
+            //StackPanel spFromTiVin = (StackPanel)tiVin.Content;
+            //spFromTiVin = maket.spSearchCarByVin;
+            //spFromTiVin.Children.Add(maket.spSearchCarByVin);
+
+            tiVin.Content = tiCatalog.Content;
+            //tiVin.Content = spFromTiVin;
         }
 
         private void CarName_MouseLeave(object sender, MouseEventArgs e)
