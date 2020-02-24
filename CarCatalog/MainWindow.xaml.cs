@@ -24,10 +24,10 @@ namespace CarCatalog
         public MainWindow()
         {
             InitializeComponent();
-            FillContentCarBrend();
+            FillContentAllCarBrend();
         }
 
-        public void FillContentCarBrend()
+        public void FillContentAllCarBrend()
         {
             int column = gCarBrand.ColumnDefinitions.Count();
             int row = gCarBrand.RowDefinitions.Count();
@@ -73,8 +73,8 @@ namespace CarCatalog
                         countFiles++;
                     }
 
-                    
-                    carName.MouseLeftButtonUp += CarName_MouseLeftButtonUp;
+
+                    itemCarBrand.MouseLeftButtonUp += ItemCarBrand_MouseLeftButtonUp;
                     carName.MouseEnter += CarName_MouseEnter;
                     carName.MouseLeave += CarName_MouseLeave;
 
@@ -87,6 +87,46 @@ namespace CarCatalog
 
         }
 
+        public void FillContentOneCarBrend(Image image)
+        {
+
+            StackPanel brandLogo = new StackPanel();
+            StackPanel searchCarByVin = new StackPanel();
+            StackPanel searchCarByBody = new StackPanel();
+            StackPanel searchCarByParams = new StackPanel();
+
+            Grid.SetRowSpan(brandLogo, 6);
+            image.Width = 100;
+            image.Height = 100;
+            brandLogo.Children.Add(image);
+            gCarBrand.Children.Add(brandLogo);
+
+            // 
+            searchCarByVin = GetGroupBlock();
+            Grid.SetRow(searchCarByVin, 0);
+            Grid.SetColumn(searchCarByVin, 1);
+            Grid.SetRowSpan(searchCarByVin, 6);
+
+            TextBlock header = new TextBlock() { Width = 500, Height = 200, Background = Brushes.LightGray};
+            header.Text = "Поиск автомобиля по VIN";
+
+            gCarBrand.Children.Add(searchCarByVin); 
+        }
+
+        private StackPanel GetGroupBlock()
+        {
+            StackPanel block = new StackPanel();
+            Border border = new Border() { BorderThickness = new Thickness(1),
+                                           BorderBrush = Brushes.Gray,
+                                           CornerRadius = new CornerRadius(3), Name = "border" };
+
+            block.Children.Add(border);
+
+            return block;
+        }
+
+
+
         private void CarName_MouseLeave(object sender, MouseEventArgs e)
         {
             ((TextBlock)sender).Foreground = Brushes.Black;
@@ -97,10 +137,16 @@ namespace CarCatalog
             ((TextBlock)sender).Foreground = Brushes.Blue;
         }
 
-        private void CarName_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void ItemCarBrand_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
 
-            MessageBox.Show((string)((TextBlock)sender).Text); 
+            gCarBrand.Children.Clear();
+            //MessageBox.Show((string)((TextBlock)sender).Text); 
+
+            var obj = ((StackPanel)sender).Children;
+            Image image = (Image)obj[0];
+            obj.Clear();
+            FillContentOneCarBrend(image);
         }
     }
 }

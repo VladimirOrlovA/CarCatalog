@@ -9,7 +9,7 @@
     <StackPanel Margin="20">
         <TabControl>
             <TabItem Header="Каталог производителей">
-                <Grid x:Name="gCarBrand" Margin="20">
+                <Grid x:Name="gCarBrand" Margin="20" ShowGridLines="True">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
