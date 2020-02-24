@@ -39,25 +39,28 @@
                     <Label>Для выполнения поиска введите номер детали, например 1002101:</Label>
 
                     <StackPanel Orientation="Horizontal">
-                                <Border CornerRadius="5"
-                                            BorderBrush="Gray"
-                                            BorderThickness="1"
-                                            Padding="3">
-                                    <TextBox x:Name="tbInputVin" Width="600"
-                                                 BorderBrush="White"></TextBox>
-                                </Border>
+                        <Border CornerRadius="5"
+                                BorderBrush="Gray"
+                                BorderThickness="1"
+                                Padding="3">
+                            <local:TextBoxWithPlaceHolder Width="600"
+                                                          BorderBrush="White"
+                                                          PlaceHolderText="Номер детали"></local:TextBoxWithPlaceHolder>
+                        </Border>
 
-                                <Border CornerRadius="5"
-                                            BorderBrush="Gray"
-                                            BorderThickness="1"
-                                            Padding="3"
-                                            Margin="5,0,0,0">
-                                    <Button Margin="10 0" 
-                                                Background="White"
-                                                BorderBrush="White">Найти</Button>
-                                </Border>
-                            </StackPanel>
+                        <Border CornerRadius="5"
+                                BorderBrush="Gray"
+                                BorderThickness="1"
+                                Padding="3"
+                                Margin="5,0,0,0">
+                            <Button Margin="10 0" 
+                                Background="White"
+                                BorderBrush="White">Найти</Button>
+                        </Border>
 
+                        
+                        
+                    </StackPanel>
                 </StackPanel>
 
             </TabItem>

@@ -53,8 +53,9 @@
                                             BorderBrush="Gray"
                                             BorderThickness="1"
                                             Padding="3">
-                                        <TextBox x:Name="tbInputVin" Width="300"
-                                                 BorderBrush="White">XTA219110EY000061</TextBox>
+                                        <local:TextBoxWithPlaceHolder x:Name="tbInputVin" Width="300"
+                                                                      BorderBrush="White"
+                                                                      PlaceHolderText="XTA219110EY000061"></local:TextBoxWithPlaceHolder>
                                     </Border>
 
                                     <Border CornerRadius="5"
@@ -99,8 +100,9 @@
                                             BorderBrush="Gray"
                                             BorderThickness="1"
                                             Padding="3">
-                                        <TextBox Width="150"
-                                                 BorderBrush="White">CK2A</TextBox>
+                                        <local:TextBoxWithPlaceHolder Width="150"
+                                                                      BorderBrush="White"
+                                                                      PlaceHolderText="CK2A"></local:TextBoxWithPlaceHolder>
 
                                     </Border>
                                     <Label>-</Label>
@@ -108,8 +110,9 @@
                                             BorderBrush="Gray"
                                             BorderThickness="1"
                                             Padding="3">
-                                        <TextBox Width="150"
-                                                 BorderBrush="White">0403374</TextBox>
+                                        <local:TextBoxWithPlaceHolder Width="150"
+                                                                      BorderBrush="White"
+                                                                      PlaceHolderText="0403374"></local:TextBoxWithPlaceHolder>
 
                                     </Border>
                                     <Border CornerRadius="5"

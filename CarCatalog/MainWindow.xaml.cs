@@ -99,8 +99,8 @@ namespace CarCatalog
 
             Grid.SetRowSpan(brandLogo, 6);
             Grid.SetColumn(brandLogo, 0);
-            image.Width = 100;
-            image.Height = 100;
+            image.Width = 150;
+            image.Height = 150;
             brandLogo.Children.Add(image);
             gCarBrand.Children.Add(brandLogo);
 
