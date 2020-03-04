@@ -36,7 +36,7 @@ namespace CarCatalog
             int column = gCarBrand.ColumnDefinitions.Count();
             int row = gCarBrand.RowDefinitions.Count();
 
-            string directoryPath = @"C:\Users\Vladimir\source\repos\CarCatalog\CarCatalog\Images";
+            string directoryPath = @"C:\Users\ОрловВ\source\repos\CarCatalog\CarCatalog\Images";
             string[] pathFileName = Directory.GetFiles(directoryPath);
             string[] fileName = new string[pathFileName.Length];
             int cutPath = directoryPath.Length + 1;
@@ -62,7 +62,7 @@ namespace CarCatalog
                     Image carImage = new Image();
                     carImage.Width = 35;
                     carImage.Height = 35;
-                    BitmapImage bi = new BitmapImage();
+                    //BitmapImage bi = new BitmapImage();
 
                     TextBlock carName = new TextBlock()
                     {
